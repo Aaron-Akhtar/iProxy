@@ -23,7 +23,7 @@ public class Proxy {
 
         new ProxyServer(proxy_port).start();
 
-        String lc = "N/A";
+        String lc = "N/A";      // last conn
         while(true){
             try {
                 if (ProxyClientHandler.connectionLogs.size() > 10){
@@ -45,7 +45,7 @@ public class Proxy {
                 for (String s : ProxyClientHandler.connectionLogs) {
                     System.out.println(Utilities.Colour.WHITE.get() + s);
                 }
-                Thread.sleep(50);
+                Thread.sleep(125);
             }catch (Exception e){
                 e.printStackTrace();
             }

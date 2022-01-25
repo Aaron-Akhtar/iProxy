@@ -20,7 +20,7 @@ public class ProxyServer extends Thread {
             while(true){
                 final Socket socket = serverSocket.accept();
                 new Thread(new ProxyClientHandler(socket)).start();
-                Thread.sleep(50);
+                Thread.sleep(125);
             }
 
         }catch (Exception e){

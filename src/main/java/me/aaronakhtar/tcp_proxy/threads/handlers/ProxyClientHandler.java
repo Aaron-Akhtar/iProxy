@@ -56,6 +56,7 @@ public class ProxyClientHandler implements Runnable {
                                 }catch (SocketTimeoutException socketTimeoutException){
                                     if (!running) break;
                                 }
+                                Thread.sleep(50);
                             }
                         } catch (Exception e){
                         }
@@ -75,7 +76,7 @@ public class ProxyClientHandler implements Runnable {
                             clientWriter.flush();
                             continue;
                         }
-                        //Thread.sleep(20);
+                        Thread.sleep(50);
                     }catch (SocketTimeoutException timeoutException){
                         if (!running) break;
                     }
